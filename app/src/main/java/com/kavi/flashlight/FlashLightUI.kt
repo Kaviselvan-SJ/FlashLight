@@ -48,7 +48,7 @@ fun FlashUI(context: Context,modifier: Modifier = Modifier){
             border = BorderStroke(5.dp,if(!torchState.value) Color.Red else Color(0xFF228C22)),
             contentPadding = PaddingValues(0.dp),
             colors = ButtonDefaults.outlinedButtonColors(
-                containerColor = Color.Transparent // Set the background color
+                containerColor = Color.Transparent
             )
             ) {
                 Image(painter = painterResource(id = if(torchState.value) R.drawable.power_on else R.drawable.power_off),
