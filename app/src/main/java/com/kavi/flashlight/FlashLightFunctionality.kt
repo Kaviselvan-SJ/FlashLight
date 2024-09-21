@@ -6,7 +6,6 @@ import android.os.Handler
 import android.os.Looper
 import android.widget.Toast
 
-
 fun torch(context: Context,state: Boolean){
     lateinit var cameraID: String
     val cameraManager: CameraManager =context.getSystemService(Context.CAMERA_SERVICE) as CameraManager
@@ -14,9 +13,11 @@ fun torch(context: Context,state: Boolean){
 
     if(state){
         cameraManager.setTorchMode(cameraID,true)
+        // to show the toast msg for custom time
         showCustomToast(context,"Flash is turned On",1500)
     }else{
         cameraManager.setTorchMode(cameraID,false)
+        // to show the toast msg for custom time
         showCustomToast(context,"Flash is turned Off",1500)
     }
 }
